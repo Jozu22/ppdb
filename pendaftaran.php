@@ -93,23 +93,9 @@ include "layout/navbar.php";
             ?>
 
             <!-- Step 2: Data Orang Tua -->
-            <!-- <div class="step"> -->
-            <!-- <h3 class="step-title">Data Orang Tua</h3> -->
-            <!-- <div class="mb-3">
-                    <label for="namaOrtu" class="form-label">Nama Orang Tua/Wali</label>
-                    <input type="text" class="form-control" id="namaOrtu" name="namaOrtu" required>
-                </div>
-                <div class="mb-3">
-                    <label for="noTelepon" class="form-label">Nomor Telepon</label>
-                    <input type="tel" class="form-control" id="noTelepon" name="noTelepon" required>
-                </div> -->
-            <!-- <button type="button" class="btn btn-secondary btn-prev">Sebelumnya</button>
-                <button type="button" class="btn btn-primary btn-next">Berikutnya</button> -->
-            <!-- </div> -->
             <?php
-            include "form.php"
+            include "step2.php"
             ?>
-
 
             <!-- Step 3: Data Wali -->
             <?php
