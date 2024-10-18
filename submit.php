@@ -2,7 +2,9 @@
 include 'utils/db/config.php'; // File koneksi ke database
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // var_dump($_POST);
+    var_dump($_POST);
+
+    // Data Siswa
     $namaLengkap = $_POST['namaLengkap'];
     $jenisKelamin = $_POST['jenisKelamin'];
     $nik = $_POST['nik'];
@@ -14,10 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tinggi = $_POST['tinggi'];
     $berat = $_POST['berat'];
     $jarak = $_POST['jarak'];
-
     // Gabungkan nilai transportasi yang dipilih ke dalam satu string
     $transportasi = isset($_POST['transportasi']) ? implode(', ', $_POST['transportasi']) : '';
-
     $tempatTinggal = $_POST['tempatTinggal'];
     $jumlahSaudaraKandung = $_POST['jumlahSaudaraKandung'];
     $jumlahSaudaraTiri = $_POST['jumlahSaudaraTiri'];
@@ -36,6 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $kewarganegaraan = $_POST['kewarganegaraan'];
     $agama = $_POST['agama'];
     $kelas = $_POST['kelas'];
+
+    // Data Orang Tua
+
 
     // Query untuk memasukkan data
     $sql = "INSERT INTO siswa (nama_lengkap, jenis_kelamin, nik, nomor_kk, nomor_registrasi_akta, tempat_lahir, tanggal_lahir, 

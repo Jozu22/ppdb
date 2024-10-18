@@ -21,7 +21,8 @@
         }
 
         .btn-prev,
-        .btn-next {
+        .btn-next,
+        .btn-kirim {
             margin-top: 20px;
         }
 
@@ -81,7 +82,8 @@ include "layout/navbar.php";
         <div class="step-indicator fixed" id="stepIndicator">
             <div class="active">Step 1: Data Anak</div>
             <div>Step 2: Data Orang Tua</div>
-            <div>Step 3: Data Alamat</div>
+            <div>Step 3: Data Wali</div>
+            <div>Step 4: Keterangan Tambahan</div>
         </div>
 
         <form id="multiStepForm" action="submit.php" method="POST" onsubmit="console.log('submitted')">
@@ -91,9 +93,9 @@ include "layout/navbar.php";
             ?>
 
             <!-- Step 2: Data Orang Tua -->
-            <div class="step">
-                <h3 class="step-title">Data Orang Tua</h3>
-                <!-- <div class="mb-3">
+            <!-- <div class="step"> -->
+            <!-- <h3 class="step-title">Data Orang Tua</h3> -->
+            <!-- <div class="mb-3">
                     <label for="namaOrtu" class="form-label">Nama Orang Tua/Wali</label>
                     <input type="text" class="form-control" id="namaOrtu" name="namaOrtu" required>
                 </div>
@@ -101,24 +103,23 @@ include "layout/navbar.php";
                     <label for="noTelepon" class="form-label">Nomor Telepon</label>
                     <input type="tel" class="form-control" id="noTelepon" name="noTelepon" required>
                 </div> -->
-                <button type="button" class="btn btn-secondary btn-prev">Sebelumnya</button>
-                <button type="button" class="btn btn-primary btn-next">Berikutnya</button>
-            </div>
+            <!-- <button type="button" class="btn btn-secondary btn-prev">Sebelumnya</button>
+                <button type="button" class="btn btn-primary btn-next">Berikutnya</button> -->
+            <!-- </div> -->
+            <?php
+            include "form.php"
+            ?>
 
-            <!-- Step 3: Data Alamat -->
-            <div class="step">
-                <h3 class="step-title">Data Alamat</h3>
-                <!-- <div class="mb-3">
-                    <label for="alamat" class="form-label">Alamat</label>
-                    <textarea class="form-control" id="alamat" name="alamat" rows="3" required></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="sekolahAsal" class="form-label">Sekolah Asal (jika ada)</label>
-                    <input type="text" class="form-control" id="sekolahAsal" name="sekolahAsal">
-                </div> -->
-                <button type="button" class="btn btn-secondary btn-prev">Sebelumnya</button>
-                <button type="submit" class="btn btn-success">Kirim Pendaftaran</button>
-            </div>
+
+            <!-- Step 3: Data Wali -->
+            <?php
+            include "step3.php"
+            ?>
+
+            <!-- Step 4: Keterangan Tambahan -->
+            <?php
+            include "step4.php";
+            ?>
         </form>
     </div>
 

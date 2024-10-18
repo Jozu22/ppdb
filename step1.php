@@ -5,15 +5,14 @@
     <div class="row">
         <!-- Bagian Kiri -->
         <div class="col-md-6">
-            <!-- <h4>Bagian 1</h4> -->
-            <!-- <form id="multiStepForm" action="proses_pendaftaran.php" method="POST"> -->
             <div class="mb-3">
                 <label for="namaLengkap" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" required>
+                <input type="text" class="form-control" id="namaLengkap" name="namaLengkap" required autofocus
+                    placeholder="Masukkan nama lengkap">
                 <span class="error-message"></span> <!-- Ini untuk pesan kesalahan -->
             </div>
             <div class="mb-3">
-                <label for="jenisKelamin" class="form-label">Jenis Kelamin</label><br>
+                <label for="jenisKelamin" class="form-label">Jenis Kelamin <span class="text-danger">*</span></label><br>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="jenisKelamin" id="lakiLaki" value="Laki-laki" checked>
                     <label class="form-check-label" for="lakiLaki">Laki-laki</label>
@@ -25,39 +24,43 @@
                 <span class="error-message"></span> <!-- Ini untuk pesan kesalahan -->
             </div>
             <div>
-                <label for="tempatLahir" class="form-label">Tempat Lahir</label>
-                <input type="text" class="form-control" id="tempatLahir" name="tempatLahir">
+                <label for="tempatLahir" class="form-label">Tempat Lahir<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="tempatLahir" name="tempatLahir" placeholder="Masukkan Tempat Lahir">
             </div>
             <div class="mb-3">
-                <label for="tanggalLahir" class="form-label">Tanggal Lahir</label>
+                <label for="tanggalLahir" class="form-label">Tanggal Lahir<span class="text-danger">*</span></label>
                 <input type="date" class="form-control" id="tanggalLahir" name="tanggalLahir">
             </div>
             <div class="mb-3">
-                <label for="tinggi" class="form-label">Tinggi</label>
-                <input type="text" class="form-control" id="tinggi" name="tinggi">
+                <label for="tinggi" class="form-label">Tinggi (cm)<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Badan">
             </div>
             <div class="mb-3">
-                <label for="berat" class="form-label">Berat</label>
-                <input type="text" class="form-control" id="berat" name="berat">
+                <label for="berat" class="form-label">Berat (kg)<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="berat" name="berat" placeholder="Masukkan Berat Badan">
             </div>
             <div class="mb-3">
-                <label for="jumlahSaudaraKandung" class="form-label">Jumlah Saudara Kandung</label>
-                <input type="number" class="form-control" id="jumlahSaudaraKandung" name="jumlahSaudaraKandung">
+                <label for="jumlahSaudaraKandung" class="form-label">Jumlah Saudara Kandung<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="jumlahSaudaraKandung" name="jumlahSaudaraKandung"
+                    placeholder="Masukkan Jumlah Saudara Kandung">
             </div>
             <div class="mb-3">
-                <label for="jumlahSaudaraTiri" class="form-label">Jumlah Saudara Tiri</label>
-                <input type="number" class="form-control" id="jumlahSaudaraTiri" name="jumlahSaudaraTiri">
+                <label for="jumlahSaudaraTiri" class="form-label">Jumlah Saudara Tiri<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="jumlahSaudaraTiri" name="jumlahSaudaraTiri"
+                    placeholder="Masukkan Jumlah Saudara Tiri">
             </div>
             <div class="mb-3">
-                <label for="jumlahSaudaraAngkat" class="form-label">Jumlah Saudara Angkat</label>
-                <input type="number" class="form-control" id="jumlahSaudaraAngkat" name="jumlahSaudaraAngkat">
+                <label for="jumlahSaudaraAngkat" class="form-label">Jumlah Saudara Angkat<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="jumlahSaudaraAngkat" name="jumlahSaudaraAngkat"
+                    placeholder="Masukkan jumlah saudara angkat">
             </div>
             <div class="mb-3">
-                <label for="bahasa" class="form-label">Bahasa yang digunakan dalam keluarga</label>
-                <input type="text" class="form-control" id="bahasa" name="bahasa">
+                <label for="bahasa" class="form-label">Bahasa yang digunakan dalam keluarga<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="bahasa" name="bahasa"
+                    placeholder="Masukkan bahasa yang digunakan sehari-hari">
             </div>
             <div class="mb-3">
-                <label for="suku" class="form-label">Suku</label>
+                <label for="suku" class="form-label">Suku<span class="text-danger">*</span></label>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-check">
@@ -97,84 +100,33 @@
                     <input type="text" class="form-control" id="sukuLain" name="sukuLain" placeholder="Masukkan suku lain">
                 </div>
             </div>
-
-            <hr>
-            <div class="mb-3">
-                <h5 for="sekolahAsal">Sebelum Masuk di SD ini berasal dari TK/SD</h5>
-                <div class="container">
-                    <div class="mb-3">
-                        <label for="namaSekolah" class="form-label">Nama Sekolah</label>
-                        <input type="text" class="form-control" id="namaSekolah" name="namaSekolah" placeholder="Masukkan nama sekolah">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="nspnSekolah" class="form-label">NSPN Sekolah</label>
-                        <input type="text" class="form-control" id="nspnSekolah" name="nspnSekolah" placeholder="Masukkan NSPN sekolah">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="alamatSekolah" class="form-label">Alamat Sekolah</label>
-                        <input type="text" class="form-control" id="alamatSekolah" name="alamatSekolah" placeholder="Masukkan alamat sekolah">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="desaSekolah" class="form-label">Desa</label>
-                        <input type="text" class="form-control" id="desaSekolah" name="desaSekolah" placeholder="Masukkan desa sekolah">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="kabupatenSekolah" class="form-label">Kabupaten</label>
-                        <input type="text" class="form-control" id="kabupatenSekolah" name="kabupatenSekolah" placeholder="Masukkan kabupaten sekolah">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="nisn" class="form-label">NISN</label>
-                        <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Masukkan NISN">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="tanggalSKTB" class="form-label">Tanggal SKTB</label>
-                        <input type="date" class="form-control" id="tanggalSKTB" name="tanggalSKTB">
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="nomorSKTB" class="form-label">Nomor SKTB</label>
-                        <input type="text" class="form-control" id="nomorSKTB" name="nomorSKTB" placeholder="Masukkan nomor SKTB">
-                    </div>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="lamaTK" class="form-label">Lama Pendidikan TK</label>
-                <input type="text" class="form-control" id="lamaTK" name="lamaTK" placeholder="Masukkan nomor SKTB">
-            </div>
         </div>
 
         <!-- Bagian Kanan -->
         <div class="col-md-6">
-            <!-- <h4>Bagian 2</h4> -->
-            <!-- <form> -->
             <div class="mb-3">
-                <label for="alamatAnak" class="form-label">Alamat</label>
-                <input type="text" class="form-control" id="alamatAnak" name="alamatAnak">
+                <label for="alamatAnak" class="form-label">Alamat<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="alamatAnak" name="alamatAnak"
+                    placeholder="Masukkan alamat tempat tinggal">
             </div>
             <div class="mb-3">
-                <label for=" nik" class="form-label">NIK</label>
-                <input type="text" class="form-control" id="nik" name="nik">
+                <label for=" nik" class="form-label">NIK (Nomor Induk Kependudukan)<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="nik" name="nik" placeholder="Masukkan nomor NIK">
             </div>
             <div class="mb-3">
-                <label for=" nomorKK" class="form-label">Nomor Kartu Keluarga</label>
-                <input type="text" class="form-control" id="nomorKK" name="nomorKK">
+                <label for=" nomorKK" class="form-label">Nomor Kartu Keluarga<span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="nomorKK" name="nomorKK" placeholder="Masukkan nomor KK">
             </div>
             <div class="mb-3">
-                <label for=" noRegisAkta" class="form-label">Nomor Registrasi Akta Kelahiran</label>
-                <input type="text" class="form-control" id="noRegisAkta" name="noRegisAkta">
+                <label for=" noRegisAkta" class="form-label">Nomor Registrasi Akta Kelahiran<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="noRegisAkta" name="noRegisAkta" placeholder="Masukkan nomor Registrasi Akta Kelahiran">
             </div>
             <div class="mb-3">
-                <label for="jarak" class="form-label">Jarak Tempat Tinggal Ke Sekolah</label>
-                <input type="text" class="form-control" id="jarak" name="jarak">
+                <label for="jarak" class="form-label">Jarak Tempat Tinggal Ke Sekolah<span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="jarak" name="jarak" placeholder="Masukkan jarak tempat tinggal ke sekolah">
             </div>
             <div class="mb-3">
-                <label for="tempatTinggal" class="form-label">Tempat Tinggal Saat Ini</label>
+                <label for="tempatTinggal" class="form-label">Tempat Tinggal Saat Ini<span class="text-danger">*</span></label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="tempatTinggal" id="rumahSendiri" value="Dirumah sendiri bersama orang tua" checked>
                     <label class="form-check-label" for="rumahSendiri">Di rumah sendiri bersama orang tua</label>
@@ -185,7 +137,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="transportasi" class="form-label">Transportasi Ke Sekolah</label>
+                <label for="transportasi" class="form-label">Transportasi Ke Sekolah<span class="text-danger">*</span></label>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-check">
@@ -238,7 +190,7 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label><br>
+                <label for="kewarganegaraan" class="form-label">Kewarganegaraan<span class="text-danger">*</span></label><br>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="kewarganegaraan" id="indonesia" value="Indonesia" checked>
                     <label class="form-check-label" for="indonesia">Indonesia</label>
@@ -254,8 +206,8 @@
                     <input type="text" class="form-control" id="kewarganegaraanLain" name="kewarganegaraanLain" placeholder="Masukkan kewarganegaraan lain">
                 </div>
             </div>
-            <div class="mb-5">
-                <label for="agama" class="form-label">Agama</label>
+            <div class="mb-3">
+                <label for="agama" class="form-label">Agama<span class="text-danger">*</span></label>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-check">
@@ -307,8 +259,63 @@
                     <input type="text" class="form-control" id="agamaLain" name="agamaLain" placeholder="Masukkan agama lain">
                 </div>
             </div>
+        </div>
+    </div>
+    <hr>
 
-            <hr>
+    <!-- BATAS  -->
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <h5 for="sekolahAsal">Sebelum Masuk di SD ini berasal dari TK/SD</h5>
+                <div class="container">
+                    <div class="mb-3">
+                        <label for="namaSekolah" class="form-label">Nama Sekolah<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="namaSekolah" name="namaSekolah" placeholder="Masukkan nama sekolah">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nspnSekolah" class="form-label">NSPN Sekolah<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="nspnSekolah" name="nspnSekolah" placeholder="Masukkan NSPN sekolah">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="alamatSekolah" class="form-label">Alamat Sekolah<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="alamatSekolah" name="alamatSekolah" placeholder="Masukkan alamat sekolah">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="desaSekolah" class="form-label">Desa<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="desaSekolah" name="desaSekolah" placeholder="Masukkan desa sekolah">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="kabupatenSekolah" class="form-label">Kabupaten<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="kabupatenSekolah" name="kabupatenSekolah" placeholder="Masukkan kabupaten sekolah">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nisn" class="form-label">NISN<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Masukkan NISN">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tanggalSKTB" class="form-label">Tanggal SKTB<span class="text-danger">*</span></label>
+                        <input type="date" class="form-control" id="tanggalSKTB" name="tanggalSKTB">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="nomorSKTB" class="form-label">Nomor SKTB<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="nomorSKTB" name="nomorSKTB" placeholder="Masukkan nomor SKTB">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lamaTK" class="form-label">Lama Pendidikan TK<span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="lamaTK" name="lamaTK" placeholder="Masukkan lama pendidikan TK">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
             <div class="mb-3">
                 <h5 for="">Jika Murid Pindahan</h5>
                 <div class="container">
@@ -348,11 +355,9 @@
                     </div>
                 </div>
             </div>
-            <!-- </form> -->
         </div>
     </div>
     <div class="text-center mt-4">
-        <!-- <h3 class="step-title">Data Anak</h3> -->
         <button type="button" class="btn btn-primary btn-next">Berikutnya</button>
     </div>
 </div>
